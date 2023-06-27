@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Website | Vanilla Javascript</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="1.png" id="stars" alt="">
+        <img src="2.png" id="moon" alt="">
+        <img src="4.png" id="back" alt="">
+        <h2 id="text">Night Sky</h2>
+        <a href="#sec" id="button">Explore</a>
+        <img src="3.png" id="front" alt="">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate eveniet sapiente fugiat ea, recusandae id officia maxime repellat? Ipsa maiores cum consequuntur distinctio quos odio rem ad dicta quia alias.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente accusamus deleniti iure voluptatem vitae, quos quasi eius exercitationem consequatur in, vel ratione pariatur sunt reprehenderit molestiae! Laboriosam sapiente nobis repudiandae!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, totam est. Quibusdam exercitationem quod corrupti at praesentium dolore temporibus, nam eveniet blanditiis fugit, labore tempora impedit repellendus similique libero qui?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis eligendi, necessitatibus eius adipisci laborum ad rerum fugiat animi vitae dolore quam repellat, similique qui cum atque nisi nihil eum? Officia!<br><br>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate eveniet sapiente fugiat ea, recusandae id officia maxime repellat? Ipsa maiores cum consequuntur distinctio quos odio rem ad dicta quia alias.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente accusamus deleniti iure voluptatem vitae, quos quasi eius exercitationem consequatur in, vel ratione pariatur sunt reprehenderit molestiae! Laboriosam sapiente nobis repudiandae!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, totam est. Quibusdam exercitationem quod corrupti at praesentium dolore temporibus, nam eveniet blanditiis fugit, labore tempora impedit repellendus similique libero qui?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis eligendi, necessitatibus eius adipisci laborum ad rerum fugiat animi vitae dolore quam repellat, similique qui cum atque nisi nihil eum? Officia!
+            <br><br>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate eveniet sapiente fugiat ea, recusandae id officia maxime repellat? Ipsa maiores cum consequuntur distinctio quos odio rem ad dicta quia alias.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente accusamus deleniti iure voluptatem vitae, quos quasi eius exercitationem consequatur in, vel ratione pariatur sunt reprehenderit molestiae! Laboriosam sapiente nobis repudiandae!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, totam est. Quibusdam exercitationem quod corrupti at praesentium dolore temporibus, nam eveniet blanditiis fugit, labore tempora impedit repellendus similique libero qui?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis eligendi, necessitatibus eius adipisci laborum ad rerum fugiat animi vitae dolore quam repellat, similique qui cum atque nisi nihil eum? Officia!
+        </p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars'); 
+        let moon = document.getElementById('moon'); 
+        let back = document.getElementById('back'); 
+        let text = document.getElementById('text'); 
+        let button = document.getElementById('button'); 
+        let front = document.getElementById('front'); 
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            back.style.top = value * 0.5 + 'px';
+            front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            button.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+</body>
+</html>
